@@ -34,9 +34,9 @@ $(function () {
   client.setConsumerKey(values.consumer_key, values.consumer_secret);
   client.setToken(values.access_token, values.access_token_secret);
   
-  $('.main').append('<h3>Requesting users_show for indexzero</h3>');
+  $('.main').append('<h3>Requesting statuses_userTimeline for indexzero</h3>');
   client.__call(
-    "users_show",
+    'statuses_userTimeline',
     { screen_name: 'indexzero' },
     function (reply) {
       

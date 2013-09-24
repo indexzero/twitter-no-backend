@@ -24,16 +24,11 @@ A simple example of how to use Twitter without any backend.
 
 ## Setting up your Twitter application
 
-Many browsers do not allow the execution of Javascript directly from files (e.g. `file://somefile.html`), so you will need to start an `http-server` of your choice to server the files in `/public`. 
-
-I recommend that you use [http-server](https://github.com/nodeapps/http-server):
+Just open `public/index.html` in your browser (This has only been tested in Google Chrome).
 
 ```
-  $ npm install -g http-server
-  $ cd /public
-  $ http-server
-  Starting up http-server, serving ./ on port: 8080
-  Hit CTRL-C to stop the server
+  $ cd /path/to/twitter-no-backend/public
+  $ open index.html
 ```
 
 ## Passing credentials to your Twitter app
@@ -49,7 +44,7 @@ The following query parameters are valid:
 
 e.g. 
 ```
-http://localhost:8080/?consumer_key=YOUR_KEY&consumer_secret=YOUR_SECRET&access_token=YOUR_TOKEN&access_token_secret=YOUR_TOKEN_SECRET
+file://twitter-no-backend/public/index.html?consumer_key=YOUR_KEY&consumer_secret=YOUR_SECRET&access_token=YOUR_TOKEN&access_token_secret=YOUR_TOKEN_SECRET
 ```
 
 Navigating to that in your browser will demonstrate a **PROOF-OF-CONCEPT basic demo** using [codebird-js](https://github.com/jublonet/codebird-js). The code is located in [/public/js/main.js](/public/js/main.js).
